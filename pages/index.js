@@ -38,7 +38,7 @@ export default function Home(props) {
       <Box>
         <Head />
         <Header />
-        <Box sx={{ m: 2 }} spacing={2}>
+        <Stack sx={{ p: 2, maxWidth: 640, mx: "auto" }} spacing={2}>
           <Typography variant="h4" component="h1" gutterBottom>
             Upload
           </Typography>
@@ -77,7 +77,7 @@ export default function Home(props) {
               </Dialog>
             </Stack>
           </form>
-        </Box>
+        </Stack>
       </Box>
     );
   } else if (props.method === "post") {
@@ -87,7 +87,7 @@ export default function Home(props) {
       <Box>
         <Head />
         <Header />
-        <Stack sx={{ m: 2 }} spacing={2}>
+        <Stack sx={{ p: 2, maxWidth: 640, mx: "auto" }} spacing={2}>
           <Typography variant="h4" component="h1" gutterBottom>
             Upload Success
           </Typography>
