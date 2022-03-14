@@ -168,7 +168,7 @@ export async function getServerSideProps(context) {
     const { files } = await formParse(context.req);
     const filepath = files.image.filepath;
     const outpath = `${__upload_dir}/${files.image.newFilename}.jpg`;
-    const imageurl = `/api/upload/${files.image.newFilename}.jpg`;
+    const imageurl = `api/upload/${files.image.newFilename}.jpg`;
 
     // call ffmpeg to convert image to jpg
     await asyncExec(`ffmpeg -i ${filepath} -y ${outpath}`);
